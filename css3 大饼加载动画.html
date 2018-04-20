@@ -1,0 +1,64 @@
+<div class="wrap">
+		<div class='out'></div>
+		<div class="inner1"></div>
+		<div class="inner2"></div>
+		<div class="inner4"></div>
+		<div class="inner3"></div>
+	
+</div>
+<style type="text/css">
+	li{list-style: none;}
+	.wrap{width: 400px;height: 500px;margin: 100px auto;position: relative;}
+	.out{
+		width: 100px;height: 100px;border-radius:100%; 
+		border: 4px solid #fb5757;border-right-color:#fff;position: relative;  
+	    margin: -2px 0 0 -3px;
+   	    animation: mymove 1s linear infinite;
+ 	}
+	.inner1{
+		width: 40px;height: 80px;border-radius: 80px 0 0 80px;
+		margin: 10px 0px 0px 10px;z-index: -1;
+		background-color: #d04c5f;position: absolute;top: 0;
+	}
+	.inner2{
+		width: 40px;height: 80px;border-radius: 0 80px 80px 0;
+		margin: 10px 0px 0px 50px;z-index: -1;
+		background-color: #e8b0b8;position: absolute;top: 0;
+	}
+	.inner3{
+		width: 40px;height: 80px;border-radius: 80px 0 0 80px;
+		margin: 10px 0px 0px 10px;z-index: 1;
+		background-color: #e8b0b8;position: absolute;top: 0;
+		transform-origin: 100% 50%;
+		animation:mymovez 1s  infinite;
+	}
+	.inner4{
+		width: 40px;height: 80px;border-radius: 80px 0 0 80px;
+		margin: 10px 0px 0px 10px;z-index: 1;
+		background-color: #d04c5f;position: absolute;top: 0;
+		transform-origin: 100% 50%;
+		animation:mymovex 1s infinite;
+	}
+	@keyframes mymovez{
+		0% { transform:rotate(0deg);z-index: 1 }
+		25% {transform:rotate(0deg); z-index: 1}
+		50% {transform:rotate(180deg);z-index: 0}
+		51% {transform:rotate(180deg);z-index: 0}
+		75%{transform:rotate(180deg);z-index: 0}
+		76%{transform:rotate(180deg);z-index: 1}
+		100%{transform:rotate(360deg);z-index: 1}
+	}
+	@keyframes mymovex{
+		0%   {transform:rotate(0deg);z-index: 1}
+		25%  {transform:rotate(180deg);z-index: 1}
+		26% {transform:rotate(180deg);z-index: 2}
+		50%  {transform:rotate(180deg);z-index: 1}
+		75% {transform:rotate(360deg);z-index: 1}
+		100% {transform:rotate(360deg);z-index: 1}
+	}
+	@keyframes mymove{
+		from {transform:rotate(0deg)}
+		to {transform:rotate(-360deg)}
+	}
+</style>
+
